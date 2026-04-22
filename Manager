@@ -1,0 +1,26 @@
+public class Manager extends Employee {
+    int teamSize;
+    
+    public Manager(String name, int age, double salary, int teamSize) {
+        super(name, age, salary);
+        this.teamSize = teamSize;
+    }
+    
+    public void displaySalary() {
+        System.out.println("My salary is $" + salary);
+        System.out.println("I manage a team of " + teamSize + " people.");
+    }
+    
+    public static void main(String[] args) {
+        Employee e = new Employee("David", 28, 48000);
+        Manager m = new Manager("Emma", 40, 85000, 5);
+        
+        e.introduce();
+        e.displaySalary();
+        
+        System.out.println();
+        
+        m.introduce();
+        m.displaySalary();
+    }
+}
